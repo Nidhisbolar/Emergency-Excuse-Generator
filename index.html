@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Emergency Excuse Generator 🚨</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Chaotic Floating Emojis Overlay -->
+  <div id="particleContainer" class="particle-container"></div>
+
+  <main class="app" id="appContainer">
+    <header class="hero">
+      <div class="hero-top">
+        <div class="badge pulse-siren">🚨 STUDENT EMERGENCY SERVICES 🚨</div>
+        <button id="soundToggle" class="sound-toggle" title="Toggle Sound FX">🔊 SFX ON</button>
+      </div>
+      <h1 class="glitch-title">Emergency<br><span>Excuse Generator</span></h1>
+      <p class="tagline">Because “I forgot” is no longer academically viable. (Bangalore Edition 🛺)</p>
+    </header>
+
+    <section class="panel">
+      <label for="situation">WHAT WENT WRONG?</label>
+      <select id="situation">
+        <option value="late">I came late to class</option>
+        <option value="assignment">I didn't submit my assignment</option>
+        <option value="absent">I missed class</option>
+        <option value="seminar">I wasn't prepared for my seminar</option>
+        <option value="presentation">I forgot my presentation</option>
+        <option value="project">My project isn't ready</option>
+      </select>
+
+      <label for="target">WHO ARE YOU EXPLAINING IT TO?</label>
+      <select id="target">
+        <option value="professor">Professor 👨‍🏫</option>
+        <option value="friend">Friend 🧑‍🤝‍🧑</option>
+        <option value="parent">Parent 👨‍👩‍👧</option>
+        <option value="teammate">Project teammate 💻</option>
+      </select>
+
+      <label for="desperation">HOW DESPERATE ARE YOU?</label>
+      <div class="levels">
+        <button class="level active" data-level="mild">😌 Mild</button>
+        <button class="level" data-level="serious">😰 Serious</button>
+        <button class="level" data-level="emergency">💀 LIFE OR DEATH</button>
+      </div>
+
+      <button id="generateBtn" class="generate">🚨 GENERATE EXCUSE 🚨</button>
+    </section>
+
+    <section id="result" class="result hidden">
+      <div class="result-top">
+        <span class="status-badge">⚡ EXCUSE GENERATED</span>
+        <span id="rank">🥲 WEAK EXCUSE</span>
+      </div>
+
+      <div id="excuseContainer" class="excuse-container">
+        <div id="excuseText" class="excuse-text"></div>
+      </div>
+
+      <div class="stats">
+        <div class="stat">
+          <div class="stat-title">Believability</div>
+          <div class="bar"><div id="believabilityBar"></div></div>
+          <strong id="believability">0%</strong>
+        </div>
+        <div class="stat">
+          <div class="stat-title">Drama Level</div>
+          <div class="bar"><div id="dramaBar"></div></div>
+          <strong id="drama">0%</strong>
+        </div>
+        <div class="stat">
+          <div class="stat-title">Chance of getting caught</div>
+          <div class="bar"><div id="caughtBar"></div></div>
+          <strong id="caught">0%</strong>
+        </div>
+      </div>
+
+      <div id="verdict" class="verdict"></div>
+
+      <div class="actions">
+        <button id="copyBtn">📋 Copy Excuse</button>
+        <button id="againBtn">🔄 Try Again</button>
+        <button id="worseBtn">💀 Make It Worse</button>
+      </div>
+    </section>
+
+    <footer>
+      <span>⚠️ For entertainment purposes only. Antigravity takes no responsibility for suspensions.</span>
+      <span>Built unnecessarily. Works surprisingly well.</span>
+    </footer>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
